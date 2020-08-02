@@ -22,6 +22,9 @@ Julia with no optimizations
 (4,1) I get 5.522631 seconds compiling with 'julia ackermann.jl'
 (4,2) Stackoverflow error. 
 
+Julia with optimzations (using memorization)
+(4,1)  0.108952 seconds (555.83 k allocations: 19.818 MiB)
+
 Rust compiled with rustc ackermann.rs and ./ackermann
 (4,1) Elapsed time: 13.89s, Answer: 65533
 

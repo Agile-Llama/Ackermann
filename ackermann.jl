@@ -1,3 +1,6 @@
+import Pkg; 
+Pkg.add("Memoize")
+
 function ack(m, n)
     if m == 0
         ans = n + 1
@@ -9,7 +12,16 @@ function ack(m, n)
     return ans
 end
 
+using Memoize
+@memoize ack3(m::Integer, n::Integer) = m == 0 ? n + 1 : n == 0 ? ack3(m - 1, 1) : ack3(m - 1, ack3(m, n - 1))
+
 # For benchmarking.
 @time begin
+    println("ack results: ")
     ack(4, 1)
-    end
+end
+
+@time begin
+    println("ack3 results: ")
+    ack3(4, 2)
+end
