@@ -1,4 +1,4 @@
-main = print (ack 4 1)
+main = print (ack 4 2)
 -- Ackermann function
 ack 0 n = n + 1
 ack m 0 = ack (m-1) 1

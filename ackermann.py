@@ -14,18 +14,7 @@ def ack(m, n):
     return memo[(m, n)]
 
 start = time.time()
-answer = ack(4,2)
+answer = ack(4,1)
 end = time.time()
 print('Answer: %d Time: %d' % (answer, end-start))
-
-
-# Initial function. Seg faulting above is optimzation. 
-#def ack(m, n):
-#    if m == 0:
-#        ans = n+1
-#    elif n == 0:
-#        ans = ack(m-1, 1)
-#    else:
-#        ans = ack(m-1, ack(m, n-1))
-#    return ans
 
