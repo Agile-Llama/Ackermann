@@ -23,5 +23,5 @@ end
 
 @time begin
     println("ack3 results: ")
-    ack3(4, 2)
+    ack3(4, 1)
 end
