@@ -1,6 +1,10 @@
 # Ackermann
 An interesting property of the Ackermann function is that the maximum stack depth needed to evaluate it (in levels of calls) is the same as the answer to the function. This means that there will be severe limits on the actual calculation that can be done, imposed by the limits of the virtual memory of your hardware.
-Generally most standard implentations of the algorithm won't make it past 4,1. Optimzations make it possible to do higher(deeper?).
+Generally most standard(Naive) implentations of the algorithm won't make it past 4,1 without some form of seg fault or stack issue. Optimzations make it possible to do higher(deeper?).
+
+A(4, 2) cannot possibly be computed by simple recursive application of the Ackermann function in any tractable
+amount of time. Instead, shortcut formulas such as A(3, n) = 8×2n−3 are used as an optimization to complete some of the recursive calls.
+A practical method of computing functions similar to Ackermann's is to use memoization of intermediate results
 
 Python with no optimzations unable to compute 4,1 without segmentation fault. 
 (4,1) With optimzations (not really a fair comparison) brings it down to under 1 second.
